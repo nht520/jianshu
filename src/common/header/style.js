@@ -43,6 +43,18 @@ export const NavItem = styled.div`
 export const Searchapper = styled.div`
     position:relative;
     float:left;
+    .slide-enter{
+        transition:all .2s ease-out;
+    }
+    .slide-enter-active{
+        width:280px;
+    }
+    .alide-exit{
+      transition:all .2s ease-out;
+    }
+    .slide-exit-active{
+         width:200px;
+    } 
     .iconfont{
         position:absolute;
         right:5px;
@@ -53,13 +65,21 @@ export const Searchapper = styled.div`
         // background:#f00;
         // color:#fff;
         text-align: center;
+        &.focused{
+            background:#777;
+            color:#fff;
+            cursor: pointer;
+        }
     }
 `;
-
+// slide-enter
+// slide-enter-active
+// alide-exit
+// slide-exit-active
 export const NavSeach = styled.input.attrs({
     placeholder:'搜索'
 })`
-    width:240px;
+    width:200px;
     height:36px;
     padding: 0 30px 0 20px;
     box-sizing:border-box;
@@ -72,6 +92,9 @@ export const NavSeach = styled.input.attrs({
     color:#777;
     &::placeholder{
         color:#999;
+    }
+    &.focused{
+        width:280px;
     }
 `;
 export const Sddition = styled.div`

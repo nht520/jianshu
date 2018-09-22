@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group'
 import {
     HeaderWrapper,
     Logo,
@@ -14,8 +15,11 @@ class Header extends Component {
     constructor(props){
         super(props);
         this.state = {
-            focused:true
+            focused:false
         }
+        this.handinputseach=this.handinputseach.bind(this)
+        this.handinputonBlur=this.handinputonBlur.bind(this)
+
     }
     render() {
         return (
@@ -28,15 +32,20 @@ class Header extends Component {
                     <NavItem className="right">
                         <i className="iconfont"> &#xe636; </i>
                     </NavItem>
-
                     <Searchapper>
-                        <NavSeach
-                            className={this.state.focused? 'focused':''}
+                        <CSSTransition
+                            in={this.state.focused}
+                            timeout={200}
+                            classNames='slide'
                         >
-                        </NavSeach>
-                        <i className="iconfont"> &#xe638; </i>
+                            <NavSeach
+                                onFocus = {this.handinputseach}
+                                className={this.state.focused? 'focused':''}
+                                onBlur = {this.handinputonBlur}
+                            ></NavSeach>
+                        </CSSTransition>
+                        <i className={this.state.focused? 'focused iconfont':'iconfont'}> &#xe638; </i>
                     </Searchapper>
-
                 </Nav>
                 <Sddition>
                     <Button className='writting'>
@@ -47,6 +56,17 @@ class Header extends Component {
                 </Sddition>
             </HeaderWrapper>
         )
+    }
+
+    handinputseach(){
+        this.setState({
+            focused:true
+        })
+    }
+    handinputonBlur(){
+        this.setState({
+            focused:false
+        })
     }
 }
 
