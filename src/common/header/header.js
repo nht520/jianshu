@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux'
 import { CSSTransition } from 'react-transition-group'
 import {
     HeaderWrapper,
@@ -10,64 +11,63 @@ import {
     Button,
     Searchapper
 } from './style';
+//无状态组件
+const Header = ( props ) => {
+   return(
+       <HeaderWrapper>
+           <Logo href='/'/>
+           <Nav>
+               <NavItem className="left active">首页</NavItem>
+               <NavItem className="left">下载APP</NavItem>
+               <NavItem className="right">登录</NavItem>
+               <NavItem className="right">
+                   <i className="iconfont"> &#xe636; </i>
+               </NavItem>
+               <Searchapper>
+                   <CSSTransition
+                       in={props.focused}
+                       timeout={200}
+                       classNames='slide'>
+                       <NavSeach
+                           onFocus = {props.handinputseach}
+                           className={props.focused? 'focused':''}
+                           onBlur = {props.handinputonBlur}>
+                       </NavSeach>
+                   </CSSTransition>
+                   <i className={props.focused? 'focused iconfont':'iconfont'}> &#xe638; </i>
+               </Searchapper>
+           </Nav>
+           <Sddition>
+               <Button className='writting'>
+                   <i className="iconfont"> &#xe615; </i>
+                   写文章
+               </Button>
+               <Button className='reg'>注册</Button>
+           </Sddition>
+       </HeaderWrapper>
+   )
+}
 
-class Header extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            focused:false
+const mapStateToProps = ( state ) =>{
+    return{
+        focused:state.focused
+    }
+}
+const MapDispatchToProps = ( dispatch ) =>{
+    return{
+        handinputseach(){
+            const action ={
+                type:'search_focus'
+            };
+            dispatch(action)
+        },
+        handinputonBlur(){
+            const action = {
+                type:'search_blur'
+            };
+            dispatch(action)
         }
-        this.handinputseach=this.handinputseach.bind(this)
-        this.handinputonBlur=this.handinputonBlur.bind(this)
-
-    }
-    render() {
-        return (
-            <HeaderWrapper>
-                <Logo href='/'/>
-                <Nav>
-                    <NavItem className="left active">首页</NavItem>
-                    <NavItem className="left">下载APP</NavItem>
-                    <NavItem className="right">登录</NavItem>
-                    <NavItem className="right">
-                        <i className="iconfont"> &#xe636; </i>
-                    </NavItem>
-                    <Searchapper>
-                        <CSSTransition
-                            in={this.state.focused}
-                            timeout={200}
-                            classNames='slide'
-                        >
-                            <NavSeach
-                                onFocus = {this.handinputseach}
-                                className={this.state.focused? 'focused':''}
-                                onBlur = {this.handinputonBlur}
-                            ></NavSeach>
-                        </CSSTransition>
-                        <i className={this.state.focused? 'focused iconfont':'iconfont'}> &#xe638; </i>
-                    </Searchapper>
-                </Nav>
-                <Sddition>
-                    <Button className='writting'>
-                        <i className="iconfont"> &#xe615; </i>
-                        写文章
-                    </Button>
-                    <Button className='reg'>注册</Button>
-                </Sddition>
-            </HeaderWrapper>
-        )
-    }
-
-    handinputseach(){
-        this.setState({
-            focused:true
-        })
-    }
-    handinputonBlur(){
-        this.setState({
-            focused:false
-        })
     }
 }
 
-export default Header;
+export default connect(mapStateToProps,MapDispatchToProps)(Header);
