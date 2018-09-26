@@ -1,15 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import { CSSTransition } from 'react-transition-group'
+import { connect } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
+import  * as actionCreators  from './store/actionCreators';
 import {
-    HeaderWrapper,
-    Logo,
-    Nav,
-    NavItem,
-    NavSeach,
-    Sddition,
-    Button,
-    Searchapper
+    HeaderWrapper, Logo,
+    Nav, NavItem,
+    NavSeach, Sddition,
+    Button, Searchapper,
 } from './style';
 //无状态组件
 const Header = ( props ) => {
@@ -26,12 +23,13 @@ const Header = ( props ) => {
                <Searchapper>
                    <CSSTransition
                        in={props.focused}
-                       timeout={200}
+                       timeout={ 200 }
                        classNames='slide'>
                        <NavSeach
-                           onFocus = {props.handinputseach}
                            className={props.focused? 'focused':''}
-                           onBlur = {props.handinputonBlur}>
+                           onFocus = {props.handinputseach}
+                           onBlur = {props.handinputonBlur}
+                       >
                        </NavSeach>
                    </CSSTransition>
                    <i className={props.focused? 'focused iconfont':'iconfont'}> &#xe638; </i>
@@ -47,27 +45,20 @@ const Header = ( props ) => {
        </HeaderWrapper>
    )
 }
-
-const mapStateToProps = ( state ) =>{
+//state 表示store里面的所有数据
+const mapStateToProps = ( state ) => {
     return{
-        focused:state.focused
+        focused:state.header.focused,
     }
 }
-const MapDispatchToProps = ( dispatch ) =>{
+const MapDispatchToProps = ( dispatch ) => {
     return{
-        handinputseach(){
-            const action ={
-                type:'search_focus'
-            };
-            dispatch(action)
+        handinputseach () {
+            dispatch( actionCreators.searchFocus() );
         },
-        handinputonBlur(){
-            const action = {
-                type:'search_blur'
-            };
-            dispatch(action)
+        handinputonBlur () {
+            dispatch( actionCreators.searchBlur() );
         }
     }
 }
-
-export default connect(mapStateToProps,MapDispatchToProps)(Header);
+export default connect( mapStateToProps,MapDispatchToProps )(Header);
