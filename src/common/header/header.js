@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
-import  * as actionCreators  from './store/actionCreators';
+import {actionCreators}  from './store';
 import {
-    HeaderWrapper, Logo,
-    Nav, NavItem,
-    NavSeach, Sddition,
-    Button, Searchapper,
+    HeaderWrapper,
+    Logo,
+    Nav,
+    NavItem,
+    NavSeach,
+    Sddition,
+    Button,
+    Searchapper,
+    SearchInfo
 } from './style';
 //无状态组件
 const Header = ( props ) => {
@@ -33,6 +38,7 @@ const Header = ( props ) => {
                        </NavSeach>
                    </CSSTransition>
                    <i className={props.focused? 'focused iconfont':'iconfont'}> &#xe638; </i>
+                   <SearchInfo>搜索</SearchInfo>
                </Searchapper>
            </Nav>
            <Sddition>
@@ -48,7 +54,7 @@ const Header = ( props ) => {
 //state 表示store里面的所有数据
 const mapStateToProps = ( state ) => {
     return{
-        focused:state.header.focused,
+        focused:state.get('header').get('focused')
     }
 }
 const MapDispatchToProps = ( dispatch ) => {
