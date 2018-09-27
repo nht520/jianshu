@@ -3,10 +3,14 @@ import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import  * as actionCreators  from './store/actionCreators';
 import {
-    HeaderWrapper, Logo,
-    Nav, NavItem,
-    NavSeach, Sddition,
-    Button, Searchapper,
+    HeaderWrapper,
+    Logo,
+    Nav,
+    NavItem,
+    NavSeach,
+    Sddition,
+    Button,
+    Searchapper,
 } from './style';
 //无状态组件
 const Header = ( props ) => {
