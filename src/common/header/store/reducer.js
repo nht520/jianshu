@@ -3,18 +3,24 @@ const { fromJS } = require('immutable');
 //defaultState放store默认数据
 const defaultState = fromJS({
     focused:false,
+    ListItem:[]
 });
-
+// immutable的set的方法会结合之前immutable对象的值
+//和设置的值，返回一个全新的对象
 export default  ( state = defaultState, action ) => {
+    switch(action.type){
+        case actionTypes.SEARCH_FOCUS:
+            return state.set('focused',true);
+        case actionTypes.SEARCH_BLUR:
+            return state.set('focused',false);
+        case actionTypes.CHANGE_LIST:
+            return state.set('ListItem',action.data);
+        default:
+    }
 
-    if (action.type === actionTypes.SEARCH_FOCUS){
-        // immutable的set的方法会结合之前immutable对象的值
-        //和设置的值，返回一个全新的对象
-        return state.set('focused',true)
-    }
-    if (action.type === actionTypes.SEARCH_BLUR){
-        return state.set('focused',false)
-    }
+    // if(action.type === actionTypes.CHANGE_LIST){
+    //     return state.set('ListItem',action.data)
+    // }
 
     return state;
 }

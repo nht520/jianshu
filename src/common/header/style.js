@@ -101,11 +101,47 @@ export const SearchInfo = styled.div`
     position:absolute;
     left:18px;
     top:57px;
-    width:240px;
+    width:230px;
+    height:150px;
+    overflow: hidden;
+    border-radius：5px;
     padding:0% 20px;
-    height:200px;
     border:1px solid  #f0f0f0;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    // display: none;
+    // &.searchInfo{
+    //      display: block;
+    //      box-shadow: 0 0 8px rgba(0,0,0,.2);
+    // }
 `;
+export const SearchInfoTitle = styled.div`
+    color:#969696;
+    font-size:14px;
+`;
+export const SearchInfoSwich = styled.span`
+    color:#969696;
+    float:right;
+    font-size:13px;
+`;
+export const SerchDiv = styled.div`
+`;
+export const SearchInfoItem = styled.a`
+    padding: 0px 10px;
+    margin-right: 5%;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    float: left;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color:#969696;
+    text-decoration: none;
+    border-radius: 3px;
+    &.searcha:hover{
+         transition: 1s;
+        color:#000;
+    }
+`;
+
 export const Sddition = styled.div`
     width:22%;
     float:left;
