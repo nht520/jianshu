@@ -97,6 +97,15 @@ export const NavSeach = styled.input.attrs({
         width:280px;
     }
 `;
+export const SearchInfo = styled.div`
+    position:absolute;
+    left:18px;
+    top:57px;
+    width:240px;
+    padding:0% 20px;
+    height:200px;
+    border:1px solid  #f0f0f0;
+`;
 export const Sddition = styled.div`
     width:22%;
     float:left;
