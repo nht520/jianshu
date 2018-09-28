@@ -3,7 +3,9 @@ const { fromJS } = require('immutable');
 //defaultState放store默认数据
 const defaultState = fromJS({
     focused:false,
-    ListItem:[]
+    ListItem:[],
+    page:1,
+    totalPage:1,
 });
 // immutable的set的方法会结合之前immutable对象的值
 //和设置的值，返回一个全新的对象
@@ -14,7 +16,8 @@ export default  ( state = defaultState, action ) => {
         case actionTypes.SEARCH_BLUR:
             return state.set('focused',false);
         case actionTypes.CHANGE_LIST:
-            return state.set('ListItem',action.data);
+            return state.set('ListItem',action.data)
+                        .set('totalPage',action.totalPage);
         default:
     }
 

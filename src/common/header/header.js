@@ -32,7 +32,8 @@ class Header extends Component{
                     <SerchDiv>
                         {
                             list.map((item) => {
-                                return <SearchInfoItem  href='/' key={item} className='searcha'>{item}
+                                return <SearchInfoItem  href='/' key={item} className='searcha'>
+                                    {item}
                                 </SearchInfoItem>
                             })
                         }
