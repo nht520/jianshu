@@ -45,7 +45,17 @@ class Header extends Component{
                         </SearchInfoSwich>
                     </SearchInfoTitle>
                     <SerchDiv>
+<<<<<<< HEAD
                         { pageList }
+=======
+                        {
+                            list.map((item) => {
+                                return <SearchInfoItem  href='/' key={item} className='searcha'>
+                                    {item}
+                                </SearchInfoItem>
+                            })
+                        }
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
                     </SerchDiv>
                 </SearchInfo>
             )

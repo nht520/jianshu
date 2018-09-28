@@ -74,27 +74,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="2" />
-          <entry key="js" value="71" />
-          <entry key="json" value="2" />
+          <entry key="js" value="85" />
+          <entry key="json" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="71" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1086" />
+          <entry key="js" value="1186" />
           <entry key="json" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="33" />
-          <entry key="JavaScript" value="1086" />
+          <entry key="JavaScript" value="1186" />
         </counts>
       </usages-collector>
     </session>
@@ -104,8 +104,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/header/header.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="191">
               <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+=======
+            <state relative-caret-position="-394">
+              <caret line="37" selection-start-line="37" selection-end-line="38" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -113,6 +118,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/header/style.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,6 +133,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-60">
               <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/common/header/store/actionCreators.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -135,6 +148,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/public/api/List.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
@@ -157,6 +171,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/common/header/store/reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
             </state>
           </provider>
         </entry>
@@ -181,12 +201,18 @@
       <find>Sddition</find>
       <find>SearchInfoItem</find>
       <find>handinputseach</find>
+<<<<<<< HEAD
       <find>handinputonBlur</find>
       <find>handleMouseIn</find>
       <find>searchBlur</find>
       <find>SearchInfoSwich</find>
       <find>mouseEnter</find>
       <find>onLoadCSS</find>
+=======
+      <find>changeList</find>
+      <find>getList</find>
+      <find>ListItem</find>
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,19 +226,26 @@
         <option value="$PROJECT_DIR$/src/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/common/header/store.js" />
         <option value="$PROJECT_DIR$/src/common/header/reducer.js" />
-        <option value="$PROJECT_DIR$/src/common/header/store/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/public/api/List.json.js" />
         <option value="$PROJECT_DIR$/public/api/package.json" />
         <option value="$PROJECT_DIR$/src/common/header/store/actionTypes.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/common/header/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/common/header/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/statics/iconfont/iconfont.js" />
         <option value="$PROJECT_DIR$/public/api/List.json" />
         <option value="$PROJECT_DIR$/src/common/header/style.js" />
         <option value="$PROJECT_DIR$/src/common/header/header.js" />
+=======
+        <option value="$PROJECT_DIR$/src/common/header/style.js" />
+        <option value="$PROJECT_DIR$/src/common/header/store/index.js" />
+        <option value="$PROJECT_DIR$/src/common/header/header.js" />
+        <option value="$PROJECT_DIR$/src/common/header/store/reducer.js" />
+        <option value="$PROJECT_DIR$/src/common/header/store/actionCreators.js" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
       </list>
     </option>
   </component>
@@ -238,11 +271,19 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="646" />
     <option name="y" value="105" />
     <option name="width" value="1582" />
     <option name="height" value="817" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="327" />
+    <option name="y" value="397" />
+    <option name="width" value="1582" />
+    <option name="height" value="908" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -274,6 +315,7 @@
             <path>
               <item name="jianshu" type="b2602c69:ProjectViewProjectNode" />
               <item name="jianshu" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,6 +327,8 @@
             <path>
               <item name="jianshu" type="b2602c69:ProjectViewProjectNode" />
               <item name="jianshu" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -337,8 +381,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538058440672" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../nahet" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538127447987" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../React" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -398,6 +447,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="56165000" />
   </component>
   <component name="ToolWindowManager">
@@ -405,6 +455,15 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19645204" />
+=======
+    <option name="totallyTimeSpent" value="62733000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="438" y="322" width="1582" height="908" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19185282" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
       <window_info id="Structure" order="1" weight="0.24967149" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -474,6 +533,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/common/header/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -481,6 +541,12 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/statics/iconfont/iconfont.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
         </state>
       </provider>
     </entry>
@@ -501,29 +567,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/react/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="379" column="44" selection-start-line="379" selection-start-column="44" selection-end-line="379" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/react/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/api/List.json.js" />
+    <entry file="file://$PROJECT_DIR$/src/common/header/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="220">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+=======
+        <state relative-caret-position="2140">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/header/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="80">
           <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
@@ -534,11 +601,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+=======
+        <state relative-caret-position="60">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/statics/iconfont/iconfont.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="360">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
@@ -548,19 +640,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+=======
+        <state relative-caret-position="40">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/header/store/actionCreators.js">
+    <entry file="file://$PROJECT_DIR$/public/api/List.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/header/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-60">
           <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+=======
+        <state relative-caret-position="-394">
+          <caret line="37" selection-start-line="37" selection-end-line="38" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/public/api/List.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -581,6 +690,21 @@
           <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/common/header/store/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/header/store/actionCreators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+>>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
           </folding>
         </state>
       </provider>
