@@ -55,7 +55,7 @@ export const Searchapper = styled.div`
     .slide-exit-active{
          width:200px;
     } 
-    .iconfont{
+    .zoom{
         position:absolute;
         right:5px;
         bottom:12px
@@ -102,7 +102,6 @@ export const SearchInfo = styled.div`
     left:18px;
     top:57px;
     width:230px;
-    height:150px;
     overflow: hidden;
     border-radius：5px;
     padding:0% 20px;
@@ -117,13 +116,23 @@ export const SearchInfo = styled.div`
 export const SearchInfoTitle = styled.div`
     color:#969696;
     font-size:14px;
+    
 `;
 export const SearchInfoSwich = styled.span`
     color:#969696;
     float:right;
     font-size:13px;
+    .spin{
+        display:block;
+        float:left;
+        font-size:13px
+        margin-right:2px;
+        transition:all .2s ease-in;
+        transform-origin:center center;
+    }
 `;
 export const SerchDiv = styled.div`
+    font-size:12px;
 `;
 export const SearchInfoItem = styled.a`
     padding: 0px 10px;

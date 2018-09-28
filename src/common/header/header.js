@@ -19,23 +19,33 @@ import {
 } from './style';
 class Header extends Component{
     getListshow (){
-        const { focused,list } =this.props;
-        if (focused){
+        const { focused, list, page,totalPage,mouseIn,handleMousEnter,handleMousLeave,handChangePage } =this.props;
+        const newList = list.toJS();
+        const pageList = [];
+        if(newList.length){
+            for( let i = ( page-1 ) * 10; i<page * 10; i++ ){
+                pageList.push(
+                    <SearchInfoItem   key={ [i] } className='searcha'>{ newList[i] }</SearchInfoItem>
+                )
+            }
+        }
+        if (focused || mouseIn){
             return(
-                <SearchInfo>
+                <SearchInfo
+                    onMouseEnter={ handleMousEnter }
+                    onMouseLeave={ handleMousLeave }
+                >
                     <SearchInfoTitle>
                         热门搜索
-                        <SearchInfoSwich>
+                        <SearchInfoSwich
+                            onClick={()=>handChangePage(page,totalPage,this.spinIcon)}
+                        >
+                            <i ref={(icon)=>{this.spinIcon=icon}} className="iconfont spin">&#xe6b6;</i>
                             换一批
                         </SearchInfoSwich>
                     </SearchInfoTitle>
                     <SerchDiv>
-                        {
-                            list.map((item) => {
-                                return <SearchInfoItem  href='/' key={item} className='searcha'>{item}
-                                </SearchInfoItem>
-                            })
-                        }
+                        { pageList }
                     </SerchDiv>
                 </SearchInfo>
             )
@@ -67,7 +77,7 @@ class Header extends Component{
                             >
                             </NavSeach>
                         </CSSTransition>
-                        <i className={focused? 'focused iconfont':'iconfont'}> &#xe638; </i>
+                        <i className={focused? 'focused iconfont zoom':'iconfont zoom'}> &#xe638; </i>
                         {this.getListshow()}
                     </Searchapper>
                 </Nav>
@@ -92,17 +102,40 @@ class Header extends Component{
 const mapStateToProps = ( state ) => {
     return{
         focused:state.getIn(['header','focused']),
-        list:state.getIn(['header','ListItem'])
+        list:state.getIn(['header','ListItem']),
+        page:state.getIn(['header','page']),
+        totalPage:state.getIn(['header','totalPage']),
+        mouseIn:state.getIn(['header','mouseIn']),
     }
 }
 const MapDispatchToProps = ( dispatch ) => {
     return{
         handinputseach () {
-            dispatch(actionCreators.getList());
+            dispatch( actionCreators.getList());
             dispatch( actionCreators.searchFocus() );
         },
         handinputonBlur () {
             dispatch( actionCreators.searchBlur() );
+        },
+        handleMousEnter () {
+            dispatch( actionCreators.mouseEnter() )
+        },
+        handleMousLeave () {
+            dispatch( actionCreators.mouseLeave() )
+        },
+        handChangePage(page,totalPage,spin){
+            let originAngle = spin.style.transform.replace(/[^0-9]ig/, '');
+            if(originAngle){
+                originAngle = parseInt(originAngle,10);
+            }else {
+                originAngle = 0;
+            }
+            spin.style.transform='rotate('+ (originAngle + 360)+'deg)';
+            if( page < totalPage ){
+                dispatch(actionCreators.ChangePage(page+1));
+            }else {
+                dispatch(actionCreators.ChangePage(1));
+            }
         }
     }
 }
