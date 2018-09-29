@@ -1,0 +1,51 @@
+{
+  "success":true,
+  "data":{
+    "topickList":[
+      {
+        "id":1,
+        "title":"社会热点1",
+        "imgUrl":"//upload.jianshu.io/collections/images/283250/%E6%BC%AB%E7%94%BB%E4%B8%93%E9%A2%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id":2,
+        "title":"手绘",
+        "imgUrl":"//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      }
+    ],
+    "articleList":[
+      {
+        "id":1,
+        "title":"新上司睡了我老公",
+        "decs":"表面看似完美的东西，下面是更多的暗流。 上班的时候同事杨丽丽给我说:“咱们部门要来新经理了。” 来就来呗，只要我们做好分内工作就行了，我回答道。...",
+        "imgUrl":"//upload-images.jianshu.io/upload_images/13350428-6ce55d2c7e59a0b1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      },
+      {
+        "id":2,
+        "title":"易效能 | 90天个人践行",
+        "decs":"（文章转载自实用摄影技巧） 想拍好日落美景，需要注意哪些问题？把握日落的时间，准备好相应的器材，正确准确精确地调整曝光，还有构图。 不同的构图能...",
+        "imgUrl":"//upload-images.jianshu.io/upload_images/10838589-bb815c204367fa2c.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      },
+      {
+        "id":3,
+        "title":"我娶了一位钻到钱眼儿的媳妇",
+        "decs":"我不测位女子，不远千里随我而来，顺理成章结婚生子，刚结婚时，我们的日子过得很艰难，没有房子，没有车子，更不用说票子，我们受限于体制，虽忙碌但收入微薄，那时的我们努力着",
+        "imgUrl":"//upload-images.jianshu.io/upload_images/7320376-12dd54466a937f05.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      }
+    ],
+    "recommerList":[
+      {
+        "id":1,
+        "imgUrl":"http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+      },
+      {
+        "id":2,
+        "imgUrl":"http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png"
+      },
+      {
+        "id":3,
+        "imgUrl":"http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+      }
+    ]
+  }
+}
