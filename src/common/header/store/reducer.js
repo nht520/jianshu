@@ -3,10 +3,7 @@ const { fromJS } = require('immutable');
 //defaultState放store默认数据
 const defaultState = fromJS({
     focused:false,
-<<<<<<< HEAD
     mouseIn:false,
-=======
->>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
     ListItem:[],
     page:1,
     totalPage:1,
@@ -20,7 +17,6 @@ export default  ( state = defaultState, action ) => {
         case actionTypes.SEARCH_BLUR:
             return state.set('focused',false);
         case actionTypes.CHANGE_LIST:
-<<<<<<< HEAD
             return state.merge({
                 ListItem:action.data,
                 totalPage:action.totalPage
@@ -31,10 +27,8 @@ export default  ( state = defaultState, action ) => {
             return state.set('mouseIn',false);
         case actionTypes.CHANGE_PAGE:
             return state.set('page',action.page);
-=======
             return state.set('ListItem',action.data)
                         .set('totalPage',action.totalPage);
->>>>>>> f7daeef0eb9f01b4a84d830eccf2ad5dcf425096
         default:
             return state;
 
