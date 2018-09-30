@@ -137,7 +137,7 @@ export const SerchDiv = styled.div`
 export const SearchInfoItem = styled.a`
     padding: 0px 10px;
     margin-right: 5%;
-    border: 1px solid #dedede;
+    // border: 1px solid #dedede;
     font-size: 12px;
     float: left;
     line-height: 20px;
