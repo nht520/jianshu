@@ -102,6 +102,7 @@ export const SearchInfo = styled.div`
     left:18px;
     top:57px;
     width:230px;
+    background:#ffffff;
     overflow: hidden;
     border-radius：5px;
     padding:0% 20px;
@@ -122,6 +123,7 @@ export const SearchInfoSwich = styled.span`
     color:#969696;
     float:right;
     font-size:13px;
+    cursor:pointer;
     .spin{
         display:block;
         float:left;

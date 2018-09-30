@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
-import {actionCreators}  from './store';
+import { actionCreators }  from './store';
 import {
     HeaderWrapper,
     Logo,
@@ -22,11 +22,24 @@ class Header extends Component{
         const { focused, list, page,totalPage,mouseIn,handleMousEnter,handleMousLeave,handChangePage } =this.props;
         const newList = list.toJS();
         const pageList = [];
+
         if (newList.length) {
-            for (let i = (page - 1) * 10; i <= page * 10; i++) {
-                pageList.push(<SearchInfoItem key={[i]}>{newList[i]}</SearchInfoItem>)
+            for (let i = (page - 1) * 10; i < page * 10; i++) {
+                pageList.push(
+                    <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+                )
             }
         }
+        // if (newList.length) {
+        //     let a = Math.ceil(newList.length/10);
+        //     let b = page * 10;
+        //     if(a === page){
+        //         b = newList.length;
+        //     }
+        //     for (let i = (page - 1) * 10; i <= b; i++) {
+        //         pageList.push(<SearchInfoItem key={[i]}>{newList[i]}</SearchInfoItem>)
+        //     }
+        // }
         if (focused || mouseIn){
             return(
                 <SearchInfo
@@ -52,10 +65,10 @@ class Header extends Component{
         }
     }
     render(){
-        const { focused,handinputseach,handinputonBlur } = this.props;
+        const { focused,handinputseach,handinputonBlur,list } = this.props;
         return(
             <HeaderWrapper>
-                <Logo href='/'/>
+                <Logo href='/' />
                 <Nav>
                     <NavItem className="left active">首页</NavItem>
                     <NavItem className="left">下载APP</NavItem>
@@ -70,7 +83,7 @@ class Header extends Component{
                             classNames='slide'>
                             <NavSeach
                                 className={focused? 'focused':''}
-                                onFocus = {handinputseach}
+                                onFocus = {()=> handinputseach(list)}
                                 onBlur = {handinputonBlur}
                             >
                             </NavSeach>
@@ -97,7 +110,7 @@ class Header extends Component{
 //    )
 // }
 //state 表示store里面的所有数据
-const mapStateToProps = ( state ) => {
+const mapState = ( state ) => {
     return{
         focused:state.getIn(['header','focused']),
         list:state.getIn(['header','ListItem']),
@@ -106,10 +119,11 @@ const mapStateToProps = ( state ) => {
         mouseIn:state.getIn(['header','mouseIn']),
     }
 }
-const MapDispatchToProps = ( dispatch ) => {
+const MapDispatch = ( dispatch ) => {
     return{
-        handinputseach () {
-            dispatch( actionCreators.getList());
+        handinputseach (list) {
+            (list.size === 0) && dispatch(actionCreators.getList());
+            // dispatch( actionCreators.getList());
             dispatch( actionCreators.searchFocus() );
         },
         handinputonBlur () {
@@ -138,4 +152,4 @@ const MapDispatchToProps = ( dispatch ) => {
 		},
     }
 }
-export default connect( mapStateToProps,MapDispatchToProps )(Header);
+export default connect( mapState,MapDispatch )(Header);
