@@ -23,7 +23,7 @@ export const changePage = (page) => ({
 const changeList = (data) => ({
     type:actionTypes.CHANGE_LIST,
     data:fromJS(data),
-    totalPage:Math.floor(data.length / 10)
+    totalPage:Math.ceil(data.length / 10)
 });
 //点击请求数据-*
 export const getList = () => {

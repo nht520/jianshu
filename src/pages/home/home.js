@@ -11,6 +11,7 @@ import {
     HomeRight,
     BackTop
 } from './style'
+import Banner from "./commponents/Banner";
 class Home  extends  Component{
     handleScrolltop(){
         window.scrollTo(0,0);
@@ -19,7 +20,7 @@ class Home  extends  Component{
         return(
             <HomeWrapper>
                 <HomeLeft>
-                    <img  className='banner-img' alt='' src={require('../../statics/bj.jpg')} />
+                    <Banner/>
                     <Topic/>
                     <List/>
                 </HomeLeft>

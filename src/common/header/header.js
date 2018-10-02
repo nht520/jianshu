@@ -22,11 +22,24 @@ class Header extends Component{
         const { focused, list, page,totalPage,mouseIn,handleMousEnter,handleMousLeave,handChangePage } =this.props;
         const newList = list.toJS();
         const pageList = [];
+
         if (newList.length) {
             for (let i = (page - 1) * 10; i < page * 10; i++) {
-                pageList.push(<SearchInfoItem key={[i]}>{newList[i]}</SearchInfoItem>)
+                pageList.push(
+                    <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+                )
             }
         }
+        // if (newList.length) {
+        //     let a = Math.ceil(newList.length/10);
+        //     let b = page * 10;
+        //     if(a === page){
+        //         b = newList.length;
+        //     }
+        //     for (let i = (page - 1) * 10; i <= b; i++) {
+        //         pageList.push(<SearchInfoItem key={[i]}>{newList[i]}</SearchInfoItem>)
+        //     }
+        // }
         if (focused || mouseIn){
             return(
                 <SearchInfo

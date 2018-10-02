@@ -3,6 +3,7 @@ export const HomeWrapper = styled.div`
     overflow:hidden;
     width:960px;
     margin:0 auto;
+	
 `;
 export const HomeLeft = styled.div`
     float:left;
@@ -96,6 +97,7 @@ export const WriterWrapper = styled.div`
     border-radius:3px;
     text-align:center;
 `;
+<<<<<<< HEAD
 //List
 export  const  LodeMore =styled.div`
     width:100%;
@@ -120,4 +122,11 @@ export  const  BackTop =styled.div`
     border:1px solid #ccc;
     line-height:60px;
 `
+=======
+
+//
+
+
+
+>>>>>>> 49163705cc6071ab8b2055ce0660782e416a7d12
 
