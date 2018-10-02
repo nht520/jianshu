@@ -4,13 +4,17 @@ import Topic from './commponents/Topic';
 import List from './commponents/List';
 import Recommer from './commponents/Recommer';
 import Writer from './commponents/Writer';
-import axios from 'axios';
+import { actionCreators } from './store';
 import {
     HomeWrapper,
     HomeLeft,
-    HomeRight
+    HomeRight,
+    BackTop
 } from './style'
 class Home  extends  Component{
+    handleScrolltop(){
+        window.scrollTo(0,0);
+    }
     render(){
         return(
             <HomeWrapper>
@@ -23,27 +27,38 @@ class Home  extends  Component{
                      <Recommer/>
                      <Writer/>
                 </HomeRight>
+                { this.props.showScroll?<BackTop onClick={this.handleScrolltop}>返回顶部 </BackTop>:null }
+
             </HomeWrapper>
         )
     }
-    componentDidMount (){
-        axios.get('api/home.json')
-            .then((res)=>{
-                const result = res.data.data;
-                const action = {
-                    type:'change_home_data',
-                    topickList: result.topickList,
-                    articleList: result.articleList,
-                    recommerList: result.recommerList,
-                }
-                this.props.changeHomeDate(action)
-            })
+    componentDidMount() {
+        this.props.changeHomeDate();
+        this.bindEvents();
     }
-
+    componentWillUnmount(){
+        window.addEventListener('scroll',this.props.changeScrollTopshow)
+    }
+    bindEvents(){
+        window.addEventListener('scroll',this.props.changeScrollTopshow)
+    }
 }
+
+const mapState = (state) => ({
+    showScroll:state.getIn(['hoem','showScroll'])
+})
+
 const mapDispatch = ( dispatch ) =>({
-    changeHomeDate(action){
-        dispatch(action);
+    changeHomeDate() {
+        dispatch(actionCreators.getHomeTnfo());
+    },
+    changeScrollTopshow(){
+        if ( document.documentElement.scrollTop>100 ){
+            dispatch(actionCreators.toggleTopShow(true))
+        }else {
+            dispatch(actionCreators.toggleTopShow(false))
+        }
     }
 })
-export default connect(null,mapDispatch) (Home);
+
+export default connect(mapState,mapDispatch) (Home);

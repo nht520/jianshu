@@ -96,9 +96,28 @@ export const WriterWrapper = styled.div`
     border-radius:3px;
     text-align:center;
 `;
-
-
-
-
-
+//List
+export  const  LodeMore =styled.div`
+    width:100%;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-radius:20px;
+    margin:30px 0; 
+    color:#fff;
+    background:#a5a5a5;
+    cursor:pointer;
+`;
+//返回顶部
+export  const  BackTop =styled.div`
+    position: fixed;
+    width:60px;
+    height:60px;
+    bottom:30px;
+    text-align: center;
+    right:100px;
+    font-size:12px;
+    border:1px solid #ccc;
+    line-height:60px;
+`
 
