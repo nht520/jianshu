@@ -4,8 +4,7 @@ class Banner  extends  Component{
     render(){
         return(
             <div>
-                111
-                {/*<img  className='banner-img' alt='' src={require('../../statics/bj.jpg')} />*/}
+                <img  className='banner-img' alt='' src={require('../../statics/bj.jpg')} />
             </div>
         )
     }
